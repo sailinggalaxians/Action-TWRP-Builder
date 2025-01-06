@@ -1,6 +1,8 @@
 name: Recovery Build
 
 on:
+push:
+branches: main
   workflow_dispatch:
     inputs:
       MANIFEST_URL:
