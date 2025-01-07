@@ -2,8 +2,10 @@ name: Recovery Build
 
 on:
 push:
-branches: main
-  workflow_dispatch:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+workflow_dispatch:
     inputs:
       MANIFEST_URL:
         description: 'MANIFEST_URL (if want to use SSH keys, use git@github.com:XXXXX)'
